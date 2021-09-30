@@ -78,7 +78,8 @@ module Exponent
           push_url,
           body: messages.to_json,
           headers: headers,
-          accept_encoding: @gzip
+          accept_encoding: @gzip,
+          ssl_verifypeer: false
         )
       end
 
@@ -91,7 +92,8 @@ module Exponent
           receipts_url,
           body: { ids: receipt_ids }.to_json,
           headers: headers,
-          accept_encoding: @gzip
+          accept_encoding: @gzip,
+          ssl_verifypeer: false
         )
       end
 
